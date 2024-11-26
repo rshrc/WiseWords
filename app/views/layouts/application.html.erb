@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="h-full">
+  <head>
+    <title>Wise Words</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="flex-none p-4 bg-blue-500 text-white text-center font-bold">
+      Wise Words Generator
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex items-center justify-center">
+      <%= yield %>
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex-none p-4 bg-gray-800 text-white text-center">
+      © 2024 Wise Words Inc.
+    </footer>
+  </body>
+</html>
